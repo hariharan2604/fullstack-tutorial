@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Details</title>
+    <link href="/stylesheets/admin.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<!--    <script src="/javascripts/jquery.js" type="text/javascript"></script>-->
+<!--    <script src="/javascripts/admin.js"></script>-->
+  </head>
+  <body>
+    <div id="display">
+      <div id="header">
+          <form action="/filter-branch" method="post">
+        <label for="branch">Branch:</label>
+        <select id="branch" name="branch">
+            <option value="All">All</option>
+            <option value="Mylapore">Mylapore</option>
+            <option value="T Nagar">T Nagar</option>
+            <option value="Alwarpet">Alwarpet</option>
+        </select>
+        <button id="filter" type="submit">Submit</button>
+</form>      </div>
+      <table id="main">
+          <h1></h1>
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Designation</th>
+              <th>Marital Status</th>
+              <th>Branch</th>
+              <th>Operations</th>
+          </tr>
+          <% items.forEach(item => { %>
+          <tr>
+              <td><%= item.id%></td>
+              <td><%= item.name%></td>
+              <td><%= item.mobile%></td>
+              <td><%= item.age%></td>
+              <td><%= item.gender==="M"?"Male":"Female"%></td>
+              <td><%= item.email%></td>
+              <td><%= item.designation%></td>
+              <td><%= item.maritalstatus==="S"?"Single":"Married"%></td>
+              <td><%= item.branch%></td>
+              <td><button class="delete"><a href="/update/<%= item.id%>">Update</a></button>
+              <button class="delete"><a href="/delete/<%= item.id%>">Delete</a></button>
+              </td>
+          </tr>
+          <% }); %>
+      </table>
+    </div>
+
+  </body>
+</html>

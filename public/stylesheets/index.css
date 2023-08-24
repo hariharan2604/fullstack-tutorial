@@ -1,0 +1,158 @@
+.submit {
+    text-align: center;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+/*td {*/
+/*    padding: 10px;*/
+/*}*/
+
+/*tr {*/
+/*    text-align: right;*/
+/*}*/
+/* Style text and password inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Set the width to fill the container */
+  padding: 10px; /* Set padding around the content */
+  margin: 5px 0; /* Add spacing between inputs */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Apply rounded corners */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style email and URL inputs */
+input[type="email"],
+input[type="url"] {
+  width: 100%; /* Set the width to fill the container */
+  padding: 10px; /* Set padding around the content */
+  margin: 5px 0; /* Add spacing between inputs */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Apply rounded corners */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style number and range inputs */
+input[type="number"],
+input[type="range"] {
+  width: 100%; /* Set the width to fill the container */
+  padding: 10px; /* Set padding around the content */
+  margin: 5px 0; /* Add spacing between inputs */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px; /* Add spacing between inputs */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+select {
+  appearance: none; /* Remove default styling in some browsers */
+  -webkit-appearance: none; /* Remove default styling in Safari */
+  -moz-appearance: none; /* Remove default styling in Firefox */
+  background-color: #fff; /* Set the background color */
+  color: #333; /* Set the text color */
+  padding: 10px; /* Set padding around the content */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Apply rounded corners */
+  font-size: 16px; /* Set font size */
+  width: 200px; /* Set width of the select box */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Style the select dropdown arrow icon */
+select::-ms-expand {
+  display: none; /* Hide the default arrow icon in IE10+ */
+}
+
+/* Style the select dropdown arrow icon */
+select::after {
+  content: '\25BC'; /* Unicode arrow-down character */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+/* Style the select dropdown on hover */
+select:hover {
+  border-color: #999; /* Darken the border color */
+}
+
+/* Style labels */
+label {
+  display: block; /* Make labels block-level elements */
+  font-weight: bold; /* Add bold font weight */
+  margin-bottom: 5px; /* Add spacing below labels */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style labels with required indicator */
+label.required::after {
+  content: " *"; /* Add asterisk for required labels */
+  color: red; /* Set the color of the asterisk */
+}
+
+/* Style labels for checkboxes and radio buttons */
+label.checkbox-label,
+label.radio-label {
+  display: inline-block; /* Make labels inline-block */
+  margin-right: 10px; /* Add spacing to the right of labels */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 14px; /* Set font size */
+}
+
+div {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button, input[submit],.signin{
+  background-color: #4CAF50; /* Set the background color */
+  color: white; /* Set the text color */
+  padding: 10px 20px; /* Set padding around the content */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Apply rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 16px; /* Set font size */
+}
+button:hover,.signin:hover{
+  background-color: #45a049;
+}
+
+.submit{
+  padding-top: 20px;
+}
+
+/* Style labels for matching input types */
+label {
+  display: block; /* Make labels a block element to ensure proper alignment */
+  margin-bottom: 5px; /* Add spacing below labels */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style labels for email and URL inputs */
+label[for="email"],
+label[for="url"] {
+  font-weight: bold; /* Make labels for these inputs bold */
+}
+
+/* Style labels for number and range inputs */
+label[for="number"],
+label[for="range"] {
+  font-weight: bold; /* Make labels for these inputs bold */
+}
+
+/* Style labels for checkboxes and radio buttons */
+label[for="checkbox"],
+label[for="radio"] {
+  font-weight: normal; /* Reset font weight for these labels */
+}

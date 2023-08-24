@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <title>User Info</title>
+</head>
+<body>
+    <h1>Welcome <%= item.name%></h1>
+    <table id="main">
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Designation</th>
+              <th>Marital Status</th>
+              <th>Branch</th>
+              <th>Operations</th>
+          </tr>
+
+          <tr>
+              <td><%= item.id%></td>
+              <td><%= item.name%></td>
+              <td><%= item.mobile%></td>
+              <td><%= item.age%></td>
+              <td><%= item.gender==="M"?"Male":"Female"%></td>
+              <td><%= item.email%></td>
+              <td><%= item.designation%></td>
+              <td><%= item.maritalstatus==="S"?"Single":"Married"%></td>
+              <td><%= item.branch%></td>
+              <td><button class="delete"><a href="/update/u/<%= item.id%>">Update</a></button>
+              </td>
+          </tr>
+
+      </table>
+</body>
+</html>

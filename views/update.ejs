@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--suppress HtmlFormInputWithoutLabel -->
+<html>
+<head>
+  <title>Update</title>
+    <link rel="stylesheet" href="/stylesheets/update.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 style="text-align: center">Update Employee Details</h1>
+<form method="post" action="/update/<%= userflag==="u"?userflag+"/"+item.id:item.id %>">
+        <table>
+            <tr>
+                <td><label>Employee ID:</label>
+                </td>
+                <td><input name="eid" type="text" disabled value="<%= item.id%>"></td>
+            </tr>
+            <tr>
+                <td><label>Name:</label>
+                </td>
+                <td><input name="usrname" type="text" value="<%= item.name%>">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mobile:</label>
+                </td>
+                <td><input name="mobile" type="text" value="<%= item.mobile%>"></td>
+            </tr>
+            <tr>
+                <td><label>Age:</label></td>
+                <td><input name="age" type="number" value="<%= item.age%>"></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td><select name="gender"><%
+                var options = ["M","F"];
+                for ( var i = 0; i < options.length; i++ )
+                {
+                    var selected = ( item.gender === options[i] ) ? "selected" : "";
+                    var text=options[i]==="M"?"Male":"Female";
+                    %><option value="<%=options[ i ] %>" <%=selected %>><%=text %></option><%
+                }
+                %>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input name="email" type="email" value="<%=item.email%>"></td>
+            </tr>
+            <tr>
+                <td><label>Designation:</label>
+                </td>
+                <td><input name="designation" type="text" value="<%= item.designation%>"></td>
+            </tr>
+            <tr>
+                <td><label>Marital Status:</label></td>
+                <td><select name="mstatus">
+                        <%
+                options = ["S","M"];
+                for (i = 0; i < options.length; i++ )
+                {
+                    selected = ( item.gender === options[i] ) ? "selected" : "";
+                    text=options[i]==="S"?"Single":"Married";
+                    %><option value="<%=options[ i ] %>" <%=selected %>><%=text %></option><%
+                }
+                %>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="branch1">Branch:</label></td>
+                <td><select id="branch1" name="branch">
+                        <%
+                options = ["Mylapore","T Nagar","Alwarpet"];
+                for ( i = 0; i < options.length; i++ )
+                {
+                    selected = ( item.branch === options[i] ) ? "selected" : "";
+                    // text=options[i]==="M"?"Male":"Female";
+                    %><option value="<%=options[ i ] %>" <%=selected %>><%=options[i] %></option><%
+                }
+                %>
+                </select></td>
+            </tr>
+            <tr>
+                <td class="submit" colspan="2"><input type="submit" class="delete" value="Update"></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,172 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+}
+/* Style text and password inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Set the width to fill the container */
+  padding: 10px; /* Set padding around the content */
+  margin: 5px 0; /* Add spacing between inputs */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Apply rounded corners */
+  font-size: 16px; /* Set font size */
+}
+
+.anch{
+  /*pointer-events: none;*/
+}
+/* Style email and URL inputs */
+input[type="email"],
+input[type="url"] {
+  width: 100%; /* Set the width to fill the container */
+  padding: 10px; /* Set padding around the content */
+  margin: 5px 0; /* Add spacing between inputs */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Apply rounded corners */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style number and range inputs */
+input[type="number"],
+input[type="range"] {
+  width: 100%; /* Set the width to fill the container */
+  padding: 10px; /* Set padding around the content */
+  margin: 5px 0; /* Add spacing between inputs */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px; /* Add spacing between inputs */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+#header{
+  /*margin:auto;*/
+  display: flex;
+  align-items: center;
+  width:100%;
+  padding:5px;
+}
+#header>*{
+  padding:5px;
+  margin:5px;
+}
+/* Style the select dropdown */
+select {
+  appearance: none; /* Remove default styling in some browsers */
+  -webkit-appearance: none; /* Remove default styling in Safari */
+  -moz-appearance: none; /* Remove default styling in Firefox */
+  background-color: #fff; /* Set the background color */
+  color: #333; /* Set the text color */
+  padding: 10px; /* Set padding around the content */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Apply rounded corners */
+  font-size: 16px; /* Set font size */
+  width: 200px; /* Set width of the select box */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Style the select dropdown arrow icon */
+select::-ms-expand {
+  display: none; /* Hide the default arrow icon in IE10+ */
+}
+
+/* Style the select dropdown arrow icon */
+select::after {
+  content: '\25BC'; /* Unicode arrow-down character */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+/* Style the select dropdown on hover */
+select:hover {
+  border-color: #999; /* Darken the border color */
+}
+
+
+table{
+  margin-right:auto;
+  margin-left:auto;
+  border:1px solid black;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+th{
+  border-bottom:1px solid black;
+}
+tr{
+  border:1px solid black;
+}
+
+td,th{
+  border-right:1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+tr:first-child{
+  background-color: antiquewhite;
+}
+tr:nth-child(even){
+  background-color: beige;
+}
+
+td:last-child{
+  border:none;
+}
+th:last-child{
+  border:none;
+  border-bottom:1px solid black;
+}
+
+a{
+  color: #900C3F;
+  text-decoration: none;
+}
+a:after,a:active,a:hover{
+  text-decoration: none;
+  /*color: black;*/
+}
+
+.delete{
+  color: #900C3F;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  border:2px solid #F8DE22;
+  border-radius:5%;
+  background: #F8DE22 none;
+  padding:5px;
+  font-family: 'Open Sans', sans-serif;
+  transition-duration:0.4s;
+}
+
+.delete:hover{
+  /*background-color:#900C3F;*/
+  border:2px solid #C70039;
+  color: #900C3F;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Style the submit button */
+#filter {
+  background-color: #4CAF50; /* Set the background color */
+  color: white; /* Set the text color */
+  padding: 5px 10px; /* Set padding around the content */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Apply rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 16px; /* Set font size */
+}
+
+/* Style the button on hover */
+#filter:hover {
+  background-color: #45a049; /* Darken the background color */
+}
+
+
